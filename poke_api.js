@@ -1,13 +1,13 @@
-const pokedex = document.getElementById('pokedex');
+var pokedex = document.getElementById('pokedex');
 
 function fetchPokemon() {
-    const promises = [];
+    var promises = [];
     for (let i = 92; i <= 94; i++) {
-        const url = `https://pokeapi.co/api/v2/pokemon/${i}`;
+        var url = `https://pokeapi.co/api/v2/pokemon/${i}`;
         promises.push(fetch(url).then((res) => res.json()));
     }
     Promise.all(promises).then((results) => {
-        const pokemon = results.map((result) => ({
+        var pokemon = results.map((result) => ({
             name: result.name,
             image: result.sprites['front_default'],
             type: result.types.map((type) => type.type.name).join(', '),
@@ -18,7 +18,7 @@ function fetchPokemon() {
 }
 function displayPokemon(pokemon) {
     console.log(pokemon);
-    const pokemonHTMLString = pokemon
+    var pokemonHTMLString = pokemon
         .map(
             (pokemon) => `
         <li class="card">
