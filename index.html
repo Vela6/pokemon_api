@@ -12,9 +12,12 @@
         <div class="container">
             <h1>Pokemon</h1>
             <ul id="pokedex"></ul>
-            <button onclick="myFunction()">Click me</button>
-            <p id="pokemon"></p>
-            <script>function myFunction() {document.getElementById("pokemon").innerHTML = "These are my favorite pokemon!";}</script>
+        </div>
+        <div class="wrapper">
+            <div id="message" class="hide">
+                These are my favorite ghost pokemon!
+            </div>
+            <div id="button">Click me!</div>
         </div>
         <script src="poke_api.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
